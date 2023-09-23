@@ -9,3 +9,5 @@ A django application to generate invoice and invoice items using DRF.
 4 - env\scripts\activate
 5 - pip install -r requirements.txt
 6 - python manage.py runserver
+7 - Use endpoints as mentioned in mainapp's url for testing out the API.
+

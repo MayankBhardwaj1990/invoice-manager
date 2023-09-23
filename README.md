@@ -1,7 +1,7 @@
 # invoice-manager
 A django application to generate invoice and invoice items using DRF.
 
-Download & Setup Instructions
+#Download & Setup Instructions
 
 1 - Clone project: git clone https://github.com/MayankBhardwaj1990/invoice-manager.git
 2 - cd invoice_manager

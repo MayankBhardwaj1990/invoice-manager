@@ -118,7 +118,7 @@ Response Structure:
 
 
 ### **5.Get Invoice Items**
-Endpoint: http://127.0.0.1:8000/api/get_invoice/invoice_id
+Endpoint: http://127.0.0.1:8000/api/get_invoice_items/invoice_id
 
 Method: GET
 

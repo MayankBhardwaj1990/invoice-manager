@@ -91,15 +91,6 @@ Endpoint: http://127.0.0.1:8000/api/get_invoices
 
 Method: GET
 
-Request Body:
-    
-    {"invoice": "invoice_id",
-    
-    "units": 5,
-    
-    "description": "Product Description",
-    
-    "amount": 100.0}
 
 Response Structure:
 [

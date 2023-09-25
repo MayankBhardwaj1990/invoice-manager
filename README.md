@@ -1,8 +1,8 @@
-# **Invoice Manager**#
+# **Invoice Manager**
 
 Welcome to Invoice Manager! This project is a Django-based web application designed to manage invoices and invoice items. This README will guide you through setting up the project, activating the virtual environment, and using Postman to test the APIs.
 
-# **Setup and Installation**#
+# **Setup and Installation**
 Follow the appropriate steps based on your operating system.
 
 ## **Windows**
@@ -41,7 +41,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 
-# **Running the server**#
+# **Running the server**
 Run the Django development server:
 
 python manage.py runserver

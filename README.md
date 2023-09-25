@@ -48,7 +48,7 @@ python manage.py runserver
 
 The server will start at http://127.0.0.1:8000/.
 
-# **Endpoints**#
+# **Endpoints**
 ### **1.Generate Invoice**
 Endpoint: http://127.0.0.1:8000/api/generate_invoice
 

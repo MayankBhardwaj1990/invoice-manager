@@ -28,15 +28,26 @@ def generate_invoice_item(request):
 @api_view(['GET'])
 def get_invoice(request,pk):
     invoice=Invoice.objects.get(id=pk)
-    serializer=InvoiceSerializer(invoice)
-    return Response(serializer.data,status=status.HTTP_200_OK)
+    invoice_serializer=InvoiceSerializer(invoice)
+    items = InvoiceItem.objects.filter(invoice_id=pk)
+    item_serializer = InvoiceItemSerializer(items, many=True)
+    invoice_data = invoice_serializer.data
+    invoice_data['items'] = item_serializer.data
+
+    return Response(invoice_data, status=status.HTTP_200_OK)
 
     
 @api_view(['GET'])
 def get_invoices(request):
     invoices=Invoice.objects.all()
     serializer=InvoiceSerializer(invoices,many=True)
-    return Response(serializer.data,status=status.HTTP_200_OK)
+    for invoice in serializer.data:
+        invoice_id = invoice['id']
+        items = InvoiceItem.objects.filter(invoice_id=invoice_id)
+        item_serializer = InvoiceItemSerializer(items, many=True)
+        invoice['items'] = item_serializer.data
+
+    return Response(serializer.data, status=status.HTTP_200_OK)
 
     
 @api_view(['GET'])
